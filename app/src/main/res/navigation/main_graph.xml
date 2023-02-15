@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.tr4n.moviedb.presentation.ui.home.HomeFragment"
+        android:name="com.jarvis.amlich.presentation.ui.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
         <action
@@ -18,12 +18,12 @@
     </fragment>
     <fragment
         android:id="@+id/exploreFragment"
-        android:name="com.tr4n.moviedb.presentation.ui.explore.ExploreFragment"
+        android:name="com.jarvis.amlich.presentation.ui.explore.ExploreFragment"
         android:label="ExploreFragment"
         tools:layout="@layout/fragment_explore" />
     <fragment
         android:id="@+id/favoriteFragment"
-        android:name="com.tr4n.moviedb.presentation.ui.favorite.FavoriteFragment"
+        android:name="com.jarvis.amlich.presentation.ui.favorite.FavoriteFragment"
         android:label="FavoriteFragment"
         tools:layout="@layout/fragment_favorite" >
         <action
@@ -33,11 +33,11 @@
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.tr4n.moviedb.presentation.ui.detail.DetailFragment"
+        android:name="com.jarvis.amlich.presentation.ui.detail.DetailFragment"
         android:label="FavoriteFragment"
         tools:layout="@layout/fragment_detail">
         <argument
-            android:name="movieId"
+            android:name="idQue"
             app:argType="string" />
     </fragment>
 </navigation>

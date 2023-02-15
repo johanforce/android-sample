@@ -32,6 +32,10 @@
         <activity
             android:name=".presentation.ui.main.MainActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".presentation.ui.calendar.DiaryActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

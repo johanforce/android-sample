@@ -13,11 +13,11 @@ def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 android {
-    namespace 'com.tr4n.moviedb'
+    namespace 'com.jarvis.moviedb'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.tr4n.moviedb"
+        applicationId "com.jarvis.moviedb"
         minSdk 28
         targetSdk 33
         versionCode 1
@@ -47,7 +47,7 @@ android {
     productFlavors {
         develop {
             dimension "env"
-            applicationId "com.tr4n.moviedb.dev"
+            applicationId "com.jarvis.moviedb.dev"
             buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/3/\""
             buildConfigField "String", "SMALL_IMAGE_URL", "\"https://image.tmdb.org/t/p/w300\""
             buildConfigField "String", "LARGE_IMAGE_URL", "\"https://image.tmdb.org/t/p/w500\""
@@ -58,7 +58,7 @@ android {
 
         staging {
             dimension "env"
-            applicationId "com.tr4n.moviedb"
+            applicationId "com.jarvis.moviedb"
             buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/\""
             buildConfigField "String", "SMALL_IMAGE_URL", "\"https://image.tmdb.org/t/p/w300\""
             buildConfigField "String", "LARGE_IMAGE_URL", "\"https://image.tmdb.org/t/p/w500\""
@@ -69,7 +69,7 @@ android {
 
         product {
             dimension "env"
-            applicationId "com.tr4n.moviedb"
+            applicationId "com.jarvis.moviedb"
             buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/\""
             buildConfigField "String", "SMALL_IMAGE_URL", "\"https://image.tmdb.org/t/p/w300\""
             buildConfigField "String", "LARGE_IMAGE_URL", "\"https://image.tmdb.org/t/p/w500\""
@@ -80,11 +80,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = JavaVersion.VERSION_11
     }
     lintOptions {
         disable 'GradleDependency'
@@ -92,12 +92,19 @@ android {
         abortOnError false
         checkReleaseBuilds false
     }
+
+    dataBinding {
+        enabled = true
+    }
+
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
 }
 
 dependencies {
+    implementation project(':calender-library')
 
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
@@ -143,6 +150,8 @@ dependencies {
     def paging_version = "3.1.1"
 
     implementation "androidx.paging:paging-runtime:$paging_version"
+
+    implementation 'com.github.appota:JavaLunarCore:1.0.2'
 }
 
 detekt {

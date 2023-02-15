@@ -6,24 +6,24 @@
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerTopRatedMovies"
+        android:id="@+id/recyclerQue"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:text="@string/home"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/progressLoadMore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:spanCount="3"
-        tools:listitem="@layout/item_movie" />
+        tools:listitem="@layout/item_que" />
 
     <ProgressBar
         android:id="@+id/progressLoadMore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/dp_8"
+        android:padding="@dimen/px8"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHoangDao"
+            style="@style/T14H20R"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px8"
+            android:layout_marginEnd="@dimen/px16"
+            android:text="@string/hon_nhan"
+            android:textColor="@color/ink_5"
+            android:textStyle="" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

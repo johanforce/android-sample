@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="JxToolbar">
+        <attr name="toolbarViewStyle" format="enum">
+            <enum name="logo" value="0" />
+            <enum name="title" value="1" />
+            <enum name="backTitle" value="2" />
+            <enum name="backTitleButton" value="3" />
+            <enum name="backTitleIcon" value="4" />
+            <enum name="backTitle2Icon" value="5" />
+            <enum name="title2Icon" value="6" />
+        </attr>
+        <attr name="toolbarTitle" format="string" />
+        <attr name="toolbarDisableCta" format="boolean" />
+        <attr name="toolbarLogo" format="reference" />
+        <attr name="toolbarTextCta" format="string" />
+        <attr name="toolbarAction1" format="reference" />
+        <attr name="toolbarAction2" format="reference" />
+        <attr name="toolbarHideDivider" format="boolean" />
+        <attr name="toolbarBackIcon" format="reference" />
+    </declare-styleable>
+
+</resources>
